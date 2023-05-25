@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Code Editor</title>
+    <link rel="stylesheet" href="codePaint.css" />
+    <link rel="icon" href="images/logo.png"/>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap.bundle.min.js" />
+    <script
+      src="https://kit.fontawesome.com/85a8244a07.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="left">
+        <label><i class="fa-brands fa-html5"></i>HTML</label>
+        <textarea id="html-code" onkeyup="run()"></textarea>
+        <label> <i class="fa-brands fa-css3-alt"></i>CSS</label>
+        <textarea id="css-code" onkeyup="run()"></textarea>
+        <label> <i class="fa-brands fa-js"></i>JavaScript</label>
+        <textarea id="js-code" onkeyup="run()"></textarea>
+      </div>
+      <div class="right">
+        <label><i class="fa-solid fa-play"></i>Kod Görüntüsü</label>
+        <iframe id="output"></iframe>
+      </div>
+      <div class="example">
+        <label><i class="fa-solid fa-boxes-stacked"></i>Örnekler</label>
+        <div class="overlay" style="border: 1px solid white; width: 100%; height: 95%; background-color: white;  overflow: auto;">
+          <h6 class="text-black text-center mt-5">Yapmayı istediğiniz fotoğrafın üstüne tıklayarak açılan sayfadan kodlarına ulaşabilirsiniz. Kodları başlıkları ile yazan yerlere yapıştırmanız yeterli olacaktadır.</h6>
+          <div class="row mt-5">
+          <div class="col-6"><a href="kalpyapma.txt" target="_blank" ><img class="w-75" src="img/kalp.png" alt=""> <p>Kalp Animasyonu</p> </a></div>
+          <div class="col-6"><a href="rüzgargülü.txt" target="_blank" ><img class="w-75" src="img/gül.png" alt=""> <p>Rüzgar Gülü Animasyonu</p> </a></div>
+        </div>
+          <div class="row mt-2">
+            <div class="col-6"><a href="rüzgargülü.txt" target="_blank" ><img class="w-75" src="img/gül.png" alt=""> <p>Rüzgar Gülü Animasyonu</p> </a></div>
+            <div class="col-6"><a href="kalpyapma.txt" target="_blank" ><img class="w-75" src="img/kalp.png" alt=""> <p>Kalp Animasyonu</p> </a></div>
+        </div>
+          <div class="row mt-2">
+            <div class="col-6"><a href="kalpyapma.txt" target="_blank" ><img class="w-75" src="img/kalp.png" alt=""> <p>Kalp Animasyonu</p> </a></div>
+            <div class="col-6"><a href="rüzgargülü.txt" target="_blank" ><img class="w-75" src="img/gül.png" alt=""> <p>Rüzgar Gülü Animasyonu</p> </a></div>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script>
+      function run() {
+        let htmlCode = document.getElementById("html-code").value;
+        let cssCode = document.getElementById("css-code").value;
+        let jsCode = document.getElementById("js-code").value;
+        let output = document.getElementById("output");
+
+        output.contentDocument.body.innerHTML =
+          htmlCode + "<style>" + cssCode + "</style>";
+        output.contentWindow.eval(jsCode);
+      }
+    </script>
+  </body>
+</html>

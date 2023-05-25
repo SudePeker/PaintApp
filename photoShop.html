@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fotoğraf Düzenleyeci</title>
+    <link rel="icon" href="images/logo.png"/>
+    <link rel="stylesheet" href="node_modules/boxicons/css/boxicons.min.css" />
+    <script
+      src="https://kit.fontawesome.com/85a8244a07.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="photoShop.css" />
+  </head>
+  <body>
+    <div class="container disable">
+      <h2>Fotoğraf Düzenleyici</h2>
+      <div class="wrapper">
+        <div class="editor-panel">
+          <div class="filter">
+            <label class="title">Filters</label>
+            <div class="options">
+              <button class="active" id="brightness">Parlaklık</button>
+              <button id="saturation">Renk Yoğunluğu</button>
+              <button id="inversion">Negatifleştirme</button>
+              <button id="grayscale">Gri Tonlama</button>
+            </div>
+            <div class="slider">
+              <div class="filter-info">
+                <p class="name">Brightness</p>
+                <p class="value">100%</p>
+              </div>
+              <input type="range" value="100" min="0" max="200" />
+            </div>
+          </div>
+          <div class="rotate">
+            <label class="title">Döndür&Çevir</label>
+            <div class="options">
+              <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+              <button id="right">
+                <i class="fa-solid fa-rotate-right"></i>
+              </button>
+              <button id="horizontal">
+                <i class="bx bx-reflect-vertical"></i>
+              </button>
+              <button id="vertical">
+                <i class="bx bx-reflect-horizontal"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="preview-img">
+          <img src="icons/img-placeholder.svg" alt="preview-img" />
+        </div>
+      </div>
+      <div class="controls">
+        <button class="reset-filter">Sıfırla</button>
+        <div class="row">
+          <input type="file" class="file-input" accept="image/*" hidden />
+          <!-- hidden ile gizlendi -->
+          <button class="choose-img">Resim Seç</button>
+          <button class="save-img">Resimi Kaydet</button>
+        </div>
+      </div>
+    </div>
+    <script src="node_modules/boxicons/dist/boxicons.js"></script>
+    <script src="photoShop.js"></script>
+  </body>
+</html>

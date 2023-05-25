@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Çizim Sayfası</title>
+    <link rel="stylesheet" href="cizim.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div>
+        <!--  navbar start  -->
+
+        <div>
+
+            <nav class="sidebar close">
+                <header>
+                    <div class="image-text">
+                        <span class="image">
+                            <img src="images/logo2.png" alt="logo">
+                        </span>
+
+                        <div class="text logo-text">
+                            <span class="name">PaintApp</span>
+                            <span class="profession">Çizim</span>
+
+                        </div>
+                    </div>
+
+                    <i class="bx bx-chevron-right toggle"></i>
+
+
+                </header>
+                <div class="menu-bar">
+                    <div class="menu">
+
+                        <ul class="menu-links">
+                            <li class="side" id="brush">
+                                <a href="codePaint.html" target="_blank">
+                                    <img class="tools" src="icons/code.svg" alt="">
+                                    <span class="text nav-text">Kod Editör</span>
+                                </a>
+                            </li>
+                            <li class="side" id="circle">
+                                <a href="photoShop.html" target="_blank">
+                                    <img class="tools" src="icons/photo.svg" alt="">
+                                    <span class="text nav-text">Photoshop</span>
+                                </a>
+                            </li>
+                            <li class="side" id="triangle">
+                                <a href="#">
+                                    <img class="tools"  id="shareButton" src="icons/share.svg" alt="">
+                                    <span class="text nav-text">Paylaş</span>
+                                </a>
+                            </li>
+                            <li class="side">
+                                <a href="#">
+                                    <img id="ileri_al" class="tools" src="icons/redo.svg" alt="ileri_al">
+                                    <span class="text nav-text">İleri Al</span>
+                                </a>
+                            </li>
+                            <li class="side">
+                                <a href="#">
+                                    <img id="geri_al" class="tools" src="icons/undo.svg" alt="geri_al">
+
+                                    <span class="text nav-text">Geri Al</span>
+                                </a>
+                            </li>
+                            <li class="side">
+                                <a href="#">
+                                    <img src="icons/zoomin.svg" class="tools" alt="zoomInButton" id="zoomInButton">
+                                    <span class="text nav-text">Yaklaştır</span>
+                                </a>
+                            </li>
+                            <li class="side">
+                                <a href="#">
+                                    <img src="icons/zoomout.svg" class="tools" alt="zoomOutButton" id="zoomOutButton">
+                                    <span class="text nav-text">Uzaklaştır</span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                    <div class="bottom-content">
+                        <li class="side">
+                            <a href="index.html">
+                                <img src="icons/logout.svg" alt="" class="tools">
+                                <span class="text nav-text">Çıkış</span>
+                            </a>
+                        </li>
+
+                        <li class="mode side">
+
+                            <div class="moon-sun">
+
+                                <img src="icons/moon.svg" alt="" class="tools moon">
+                                <img src="icons/sun.svg" alt="" class="tools sun">
+                            </div>
+                            <span class="mode-text text">Koyu Mod</span>
+
+                            <div class="toggle-switch">
+                                <span class="switch"></span>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </nav>
+            <!-- navbar end -->
+
+
+        </div>
+        <!-- tools start -->
+
+        <div class="container">
+            <div class="top_nav">
+                <div class="element">
+                    <div class="file_menu">
+                        <div class="top_tools">                           
+
+                            <span>Kanvas</span>
+                            <div class="lable" >
+                                <small>Resim Ekle</small>
+                                <label for="photoInput" class="file-input-label">
+                                    <img src="images/photo.png" alt="">                                   
+                                    <input type="file" id="photoInput" class="file-input">
+                                  </label>
+                                  
+                            </div>
+
+                            <div class="lable startFunction" id="save">
+
+                                <small>Kaydet</small>
+                                <img title="save" src="images/save.png" alt="save painting" />
+
+                            </div>
+                            <div class="lable startFunction" id="clear">
+                                <small>Temizle</small>
+                                <img title="clean" src="images/clear.png" alt="clear all" />
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="element">
+                    <div class="file_menu">
+                        <div class="top_tools">
+                            <span>Şekiller</span>
+                            <div class="lable tool" id="rectangle">
+
+                                <small>Dikdörtgen</small>
+                                <img title="rectangle" src="images/rectangle.png" alt="rectangle" />
+
+                            </div>
+                            <div class="lable tool" id="circle">
+                                <small>Daire</small>
+                                <img title="circle" src="images/circle.png" alt="circle" />
+
+                            </div>
+                            <div class="lable tool" id="triangle">
+                                <small>Üçgen</small>
+                                <img title="triangle" src="images/triangle.png" alt="triangle" />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="check_room">
+
+                    <label for="colorCheck"> Doldur <input type="checkbox" name="" id="colorCheck"> </label>
+
+
+                </div>
+                <div class="element">
+                    <div class="file_menu">
+                        <div class="top_tools">
+                            <span>Araçlar</span>
+                            <div class="lable tool active_tool" id="brush">
+                                <small>Fırça</small>
+                                <img title="brush" src="images/brush.png" alt="brush" />
+
+                            </div>
+                            <div class="lable tool" id="eraser">
+                                <small>Silgi</small>
+                                <img title="eraser" src="images/rubber.png" alt="eraser" />
+
+                            </div>
+                        </div>
+
+                        <input type="range" name="" min="1" max="30" id="slider" value="5" />
+
+                    </div>
+                </div>
+                <div class="element">
+                    <div class="file_menu">                        
+                        <div class="top_tools">
+                            <ul class="ul_color_list">
+                                <li class="option selected_color"></li>
+                                <li class="option"></li>
+                                <li class="option"></li>
+                                <li class="option"></li>
+                                <li class="option">
+                                    <input type="color" name="" id="color_picker" value="#E1D770">
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- tools end -->
+
+            <div class="content">
+                <canvas id="canvas"></canvas>
+            </div>
+        </div>
+
+        
+        <script src="undo.js"></script>
+        <script src="cizim.js"></script>
+        <script src="sidebar.js"></script>
+        
+</body>
+
+</html>
